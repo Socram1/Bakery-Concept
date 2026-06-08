@@ -66,15 +66,15 @@
       overflow: hidden;
     }
 
-    /* decorative scallop top/bottom */
-    .hero::before, .hero::after {
+    /* decorative scallop bottom only */
+    .hero::after {
       content: '';
-      position: absolute; left: 0; right: 0;
+      position: absolute; left: 0; right: 0; bottom: 0;
       height: 28px;
       background: radial-gradient(circle at 50% 0%, var(--cream-dk) 18px, transparent 18px);
       background-size: 36px 28px;
+      z-index: 0;
     }
-    .hero::before { bottom: 0; }
 
     .hero-eyebrow {
       font-family: 'Dancing Script', cursive;
